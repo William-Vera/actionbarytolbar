@@ -6,7 +6,10 @@ import androidx.appcompat.widget.Toolbar;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
+
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,4 +42,10 @@ public class MainActivity extends AppCompatActivity {
             return super.onOptionsItemSelected(item);
         return true;
     }
+
+    public void onClickNuevo(View view) {
+        Snackbar.make(view, "Se presionó el FAB", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show();
+    }
+
 }
